@@ -3,9 +3,19 @@ import { floorResponseBonus, parseDateResponse } from '../../../shared/lib';
 import fireSVG from '../../../app/assets/fire.svg'
 import styles from './styles.module.scss'
 import { useAppSelector } from '../../../shared/hooks/useAppSelector';
+import { Spinner } from '../../../shared/ui';
+
 
 export const Modal: FC = () => {
-  const { data } = useAppSelector((state) => state.bonus)
+  const { data, loading } = useAppSelector((state) => state.bonus)
+
+  if (loading) {
+    return (
+      <div className={styles.modal}>
+      <Spinner/>
+      </div>
+    ) 
+  }
 
   return (
       <div className={styles.modal}>
