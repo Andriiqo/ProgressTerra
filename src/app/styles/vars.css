@@ -1,0 +1,19 @@
+:root {
+    --theme-color-first: #fff;
+    --theme-color-second: #000;
+    --padding: 1.75rem;
+    --padding-tablet: 2rem;
+    --padding-desktop: 2.25rem;
+
+    --color-background: #E5E5E5;
+    --color-text: #979797;
+    --color-button: #D4343F;
+    
+    --color-gradiend-from: #D2333E;
+    --color-gradient-to: #F54B55;
+    --main-gradient: 180deg, var(--color-gradiend-from) 0%, var(--color-gradient-to) 100%;
+
+    --border-radius: 1.25rem;
+
+    --min-height-block: 9.25rem;
+}

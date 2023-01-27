@@ -1,0 +1,1 @@
+export const floorResponseBonus = (bonus: number): string => String(Math.floor(bonus));

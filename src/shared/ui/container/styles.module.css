@@ -1,0 +1,20 @@
+.container {
+    padding: 0 var(--padding);
+
+    width: 100%;
+    min-height: inherit;
+
+    display: inherit;
+}
+
+@media (min-width: 48rem) {
+    .container {
+        padding: 0 var(--padding-tablet);
+    }
+}
+
+@media (min-width: 75rem) {
+    .container {
+        padding: 0 var(--padding-desktop);
+    }
+}

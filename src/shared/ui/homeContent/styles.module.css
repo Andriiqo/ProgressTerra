@@ -1,0 +1,8 @@
+.homeContent {
+    width: 100%;
+    min-height: var(--min-height-block);
+    
+    display: flex;
+
+    background: linear-gradient(var(--main-gradient));
+}
