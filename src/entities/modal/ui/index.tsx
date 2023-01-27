@@ -12,7 +12,7 @@ export const Modal: FC = () => {
   if (loading) {
     return (
       <div className={styles.modal}>
-      <Spinner/>
+        <Spinner/>
       </div>
     ) 
   }

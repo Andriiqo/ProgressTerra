@@ -1,5 +1,5 @@
 export const auth = async () => {
-    const response = await fetch(import.meta.env.VITE_API + '/' + import.meta.env.VITE_URI_CREATE_TOKEN, {
+    const response = await fetch('/api' + import.meta.env.VITE_URI_CREATE_TOKEN, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -19,7 +19,7 @@ export const auth = async () => {
 }
 
 export const getBonus = async (accessToken: string) => {
-    const response = await fetch(import.meta.env.VITE_API + '/' + import.meta.env.VITE_URI_GET_BONUS + '/' + accessToken, {
+    const response = await fetch('/api' + import.meta.env.VITE_URI_GET_BONUS + '/' + accessToken, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
