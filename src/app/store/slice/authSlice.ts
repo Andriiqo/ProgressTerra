@@ -4,9 +4,13 @@ import { auth } from '../../../shared/api'
 export const authorization = createAsyncThunk(
     'auth',
     async () => {
-      const response = await auth()
-      const data = await response.json()
-      return data 
+      try {
+        const response = await auth()
+        const data = await response.json()
+        return data 
+      } catch (error: any) {
+        throw error.message
+      }
     }
   )
 

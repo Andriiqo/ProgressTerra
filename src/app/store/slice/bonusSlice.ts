@@ -5,10 +5,14 @@ import { getBonus } from '../../../shared/api'
 export const getInfoBonus = createAsyncThunk<any, void, {state: RootState}>(
     'bonus/get',
     async (_, {getState}) => {
-      const { auth } = getState()
-      const response = await getBonus(auth.accessToken)
-      const data = await response.json()
-      return data 
+        try {
+            const { auth } = getState()
+            const response = await getBonus(auth.accessToken)
+            const data = await response.json()
+            return data 
+        } catch (error: any) {
+            throw error.message
+        }
     }
   )
 
